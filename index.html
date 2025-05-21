@@ -22,11 +22,22 @@
       <button onclick="setMode('weight')" title="Add Weight">
         <iconify-icon icon="mdi:weight" style="vertical-align: middle;"></iconify-icon>
       </button>
-
       <select id="algorithm" title="Algorithm">
         <option value="dijkstra">Dijkstra</option>
         <option value="astar">A*</option>
       </select>
+      <button onclick="clearGrid()" title="Clear">
+        <iconify-icon icon="mdi:eraser"></iconify-icon>
+      </button>
+      <button id="saveGrid" title="Save">
+        <iconify-icon icon="mdi:content-save"></iconify-icon>
+      </button>
+      <button id="loadGrid" title="Load">
+        <iconify-icon icon="mdi:folder-open"></iconify-icon>
+      </button>
+      <button onclick="generateMaze()" title="Generate Maze">
+        <iconify-icon icon="mdi:grid"></iconify-icon>
+      </button>
     </div>
   </div>
 
@@ -52,18 +63,6 @@
     <div class="control-group">
       <button onclick="findPath()" title="Find Path" class="primary-btn">
         FIND PATH
-      </button>
-      <button onclick="clearGrid()" title="Clear">
-        <iconify-icon icon="mdi:eraser"></iconify-icon>
-      </button>
-      <button id="saveGrid" title="Save">
-        <iconify-icon icon="mdi:content-save"></iconify-icon>
-      </button>
-      <button id="loadGrid" title="Load">
-        <iconify-icon icon="mdi:folder-open"></iconify-icon>
-      </button>
-      <button onclick="generateMaze()" title="Generate Maze">
-        <iconify-icon icon="mdi:grid"></iconify-icon>
       </button>
     </div>
   </div>

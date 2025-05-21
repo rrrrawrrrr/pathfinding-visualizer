@@ -22,6 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
   document.getElementById('saveGrid').addEventListener('click', saveGrid);
   document.getElementById('loadGrid').addEventListener('click', loadGrid);
+  document.getElementById('generateMaze').addEventListener('click', generateMaze);
 });
 
 function createGrid(size) {
