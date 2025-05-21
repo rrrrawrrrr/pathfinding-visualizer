@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Pathfinding Visualizer</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://code.iconify.design/iconify-icon/1.0.8/iconify-icon.min.js"></script>
+</head>
+<body>
+  <header>
+    <h1>Pathfinding Visualizer</h1>
+  </header>
+
+  <div class="top-controls">
+    <div class="control-group">
+      <button onclick="setMode('start')" title="Set Start">Start</button>
+      <button onclick="setMode('end')" title="Set End">End</button>
+      <button onclick="setMode('wall')" title="Add Wall">
+        <iconify-icon icon="mdi:wall" style="vertical-align: middle;"></iconify-icon>
+      </button>
+      <button onclick="setMode('weight')" title="Add Weight">
+        <iconify-icon icon="mdi:weight" style="vertical-align: middle;"></iconify-icon>
+      </button>
+
+      <select id="algorithm" title="Algorithm">
+        <option value="dijkstra">Dijkstra</option>
+        <option value="astar">A*</option>
+      </select>
+    </div>
+  </div>
+
+  <div id="grid"></div>
+
+  <div class="bottom-controls">
+    <div class="control-group">
+      <label for="speedControl">Speed</label>
+      <select id="speedControl">
+        <option value="slow">Slow</option>
+        <option value="medium" selected>Medium</option>
+        <option value="fast">Fast</option>
+      </select>
+
+      <label for="gridSize">Grid Size (10 to 30):</label>
+      <input type="number" id="gridSize" min="10" max="30" value="20">
+
+      <label title="Allow Diagonals">
+        <input type="checkbox" id="allowDiagonal"> Allow Diagonals
+      </label>
+    </div>
+
+    <div class="control-group">
+      <button onclick="findPath()" title="Find Path" class="primary-btn">
+        Find Path
+      </button>
+      <button onclick="clearGrid()" title="Clear">
+        <iconify-icon icon="mdi:eraser"></iconify-icon>
+      </button>
+      <button id="saveGrid" title="Save">
+        <iconify-icon icon="mdi:content-save"></iconify-icon>
+      </button>
+      <button id="loadGrid" title="Load">
+        <iconify-icon icon="mdi:folder-open"></iconify-icon>
+      </button>
+      <button onclick="generateMaze()" title="Generate Maze">
+        <iconify-icon icon="mdi:grid"></iconify-icon>
+      </button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
