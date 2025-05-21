@@ -2,7 +2,7 @@
 
 A simple algorithm visualizer for Dijkstra's and A* shortest path algorithms.  
 
-👉 Try it online: 
+👉 Try it online: https://rrrrawrrrr.github.io/pathfinding-visualizer/
 
 ---
 
