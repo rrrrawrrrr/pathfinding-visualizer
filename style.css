@@ -3,15 +3,19 @@
   --end-color: red;
   --wall-color: black;
   --visited-color: yellow;
-  --path-color: lightblue;
   --weight-color: orange;
-  --bg-color: #f4f4f4;
+  --bg-color: #fbc9d1;
   --text-color: #222;
   --accent-color: #0077cc;
+  --path-color: lightblue;
+}
+
+body, button, select, input, label {
+  font-family: 'Gaegu', cursive;
+  font-weight: bold;
 }
 
 body {
-  font-family: Arial, sans-serif;
   text-align: center;
   background-color: var(--bg-color);
   color: var(--text-color);
@@ -20,9 +24,14 @@ body {
 }
 
 h1 {
-  font-size: 24px;
+  font-size: 45px;
   margin-bottom: 20px;
   color: var(--accent-color);
+  background-color: #fff8e1;
+  display: inline-block;
+  padding: 10px 30px;
+  border-radius: 999px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 /* --- GRID --- */
@@ -72,56 +81,6 @@ h1 {
   animation: fadeInScale 0.3s ease-out;
 }
 
-/* --- MODE SELECTOR --- */
-
-.mode-selector {
-  display: flex;
-  justify-content: center;
-  gap: 12px;
-  margin: 12px 0;
-  flex-wrap: wrap;
-}
-
-.mode-option {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  cursor: pointer;
-  font-weight: bold;
-  color: var(--text-color);
-  border: 2px solid transparent;
-  padding: 4px 8px;
-  border-radius: 4px;
-  transition: all 0.2s;
-}
-
-.mode-option.active {
-  border-color: var(--accent-color);
-  background-color: rgba(0, 119, 204, 0.1);
-}
-
-.mode-option .box {
-  width: 16px;
-  height: 16px;
-  border: 1px solid #333;
-}
-
-.box.start {
-  background-color: var(--start-color);
-}
-
-.box.end {
-  background-color: var(--end-color);
-}
-
-.box.wall {
-  background-color: var(--wall-color);
-}
-
-.box.weight {
-  background-color: var(--weight-color);
-}
-
 /* --- CONTROLS --- */
 
 .top-controls,
@@ -131,7 +90,6 @@ h1 {
   align-items: center;
   gap: 16px;
   margin: 10px 0;
-  color: var(--text-color);
 }
 
 .control-group {
@@ -144,7 +102,6 @@ h1 {
 .primary-btn {
   background-color: var(--accent-color);
   color: white;
-  font-weight: bold;
   padding: 8px 18px;
   font-size: 15px;
   border: none;
@@ -166,6 +123,7 @@ input[type="number"] {
   font-size: 14px;
   border-radius: 6px;
   cursor: pointer;
+  padding: 6px 10px;
   transition: background-color 0.2s;
 }
 
@@ -174,7 +132,6 @@ button:hover {
   color: white;
 }
 
-/* --- ICONS --- */
 iconify-icon {
   font-size: 20px;
 }
