@@ -1,4 +1,4 @@
-#🧭 Pathfinding Visualizer
+# 🧭 Pathfinding Visualizer
 
 A simple algorithm visualizer for Dijkstra's and A* shortest path algorithms.  
 
